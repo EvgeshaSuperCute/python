@@ -1,5 +1,6 @@
 import operations.plus
 import ui
+import logs as l
 
 def checkInputValue():
     value = 0
@@ -9,7 +10,7 @@ def checkInputValue():
         try:
             number = float(input("num: "))
             value = number
-            ch = Tru
+            ch = True
         except ValueError:
             print("It is wrong value, expected a number...")
 
@@ -28,5 +29,8 @@ def chsOperation(values):
         res = operations.mult(values[0], values[1])
     else:
         print("incorrect operation...")
+
+    l.log(oper, values,res)
     ui.fin(res)
     #print(values)
+
