@@ -17,7 +17,7 @@ def toBinary(value) -> str:
 
     while value > 0:
         l_bin = str(value % 2) + l_bin
-        value = value // 2
+        value //= 2
 
     return l_bin
 

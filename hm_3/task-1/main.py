@@ -26,9 +26,8 @@ def listFill():
 
 def summ(list):
     res = 0
-    for i in range(len(list)):
-        if i % 2 != 0:
-            res += list[i]
+    for i in range(1,len(list),2):
+        res += list[i]
     return res
 
 def main():

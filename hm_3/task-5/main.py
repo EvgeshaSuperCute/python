@@ -18,13 +18,11 @@ def fibNums(n):
         l_fib.append(None)
 
     l_fib[n] = 0
-    l_fib[n-1] = -1
-    l_fib[n+1] = 1
+    l_fib[n-1] = l_fib[n+1] = 1
 
-    for i in range(2,n+1):
-        l_fib[n - i] = l_fib[n-i+1]+l_fib[n-i+2]
-        l_fib[n + i] = l_fib[n+i-1]+l_fib[n+i-2]
-
+    for i in range(2, n+1):
+        l_fib[n + i] = l_fib[n + i - 1] + l_fib[n + i - 2]
+        l_fib[n - i] = l_fib[n + i]*(-1)**(i+1)
     return l_fib
 
 
