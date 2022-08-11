@@ -6,12 +6,12 @@ def primeFactors(num):
 
     while num % 2 == 0:
         res.append(2)
-        num = num / 2
+        num /= 2
 
     for i in range(3, int(math.sqrt(num)) + 1, 2):
         while num % i == 0:
             res.append(i)
-            num = num / i
+            num /= i
     if num > 2:
         res.append(int(num))
     return res
