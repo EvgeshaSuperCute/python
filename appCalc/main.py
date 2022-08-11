@@ -1,25 +1,17 @@
-import tools as t
-import logs as l
-
-l.s_e_log(1)
-
-values = []
-
-for i in range(2):
-    values.append(t.checkInputValue())
-
-t.chsOperation(values)
-
-l.s_e_log(0)
+from ui import setUI
+from buttons import bttn_list
+from params import root
 
 
+def main():
+    setUI(bttn_list, root)
+    root.mainloop()
+
+
+#------------------------Main part---------------------------
+
+if __name__ == "__main__":
+    main()
 
 
 
-#values = []
-# operation = []
-#
-# expression = input("Enter expression: ")
-#
-# for i in expression:
-#     print(i)
