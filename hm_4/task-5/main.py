@@ -1,4 +1,5 @@
-import degree_indexes as di
+from degree_indexes import indexes
+
 
 
 def getData(path):
@@ -42,25 +43,28 @@ def to_deg(DEG):
     degree = ""
     temp = str(DEG)
     for char in temp:
-        degree += di.indexes[char] or ""
+        degree += indexes[char] or ""
 
     return degree
 
 
-def polynomialSumm(P_1, P_2):
+def polynomialSumm(p_1, p_2):
     vals_1 = []
     vals_2 = []
     polySumm = []
 
-    for i in range(len(P_1)):
 
-        if P_1[i].isdigit() and P_1[i-1] != "x" and P_1[i-2] != "=":
-            vals_1.append(int(P_1[i]))
+    for i in range(len(p_1)):
+        if p_1[i] == "=":
+            break
+        if p_1[i].isdigit() and p_1[i - 1] != "x":
+            vals_1.append(int(p_1[i]))
 
-    for i in range(len(P_2)):
-
-        if P_2[i].isdigit() and P_2[i-1] != "x" and P_2[i-2] != "=":
-            vals_2.append(int(P_2[i]))
+    for i in range(len(p_2)):
+        if p_2[i] == "=":
+            break
+        if p_2[i].isdigit() and p_2[i - 1] != "x":
+            vals_2.append(int(p_2[i]))
 
     print(vals_1)
     print(vals_2)
@@ -75,9 +79,13 @@ def polynomialSumm(P_1, P_2):
 
 def main():
     m_path = ['polynomial_1.txt', 'polynomial_2.txt']
+    pln_1, pln_2 = getData(m_path[0]), getData(m_path[1])
+
+
+
     print(getData(m_path[0]))
     print(getData(m_path[1]))
-    res = polynomialSumm(getData(m_path[0]), getData(m_path[1]))
+    res = polynomialSumm(pln_1, pln_2)
     print(res)
     print(setData(setPolynomial(4, res)))
 # ------------------------Main part---------------------------

@@ -25,10 +25,7 @@ def printList(p_list):
 def listFill():
     print("list size:", end="")
     n = checkInputValue()
-    l_list = []
-    for i in range(n):
-        l_list.append(rnd.randint(-9, 9) + rnd.random())
-
+    l_list = [rnd.randint(-9, 9) + rnd.random() for i in range(n)]
     printList(l_list)
     return l_list
 

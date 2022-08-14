@@ -12,10 +12,8 @@ def checkInputValue():
     return value
 
 
-def fibNums(n):
-    l_fib = []
-    for i in range(n*2+1):
-        l_fib.append(None)
+def fibNums(n: int):
+    l_fib = [None for i in range(n*2+1)]
 
     l_fib[n] = 0
     l_fib[n-1] = l_fib[n+1] = 1

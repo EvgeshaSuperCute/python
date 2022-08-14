@@ -17,32 +17,18 @@ def checkInputValue():
 
 def listFill():
     n = checkInputValue()
-    l_list = []
-    for i in range(n):
-        l_list.append(rnd.randint(0, 9))
+
+    l_list = [rnd.randint(0, 9) for i in range(n)]
 
     print("Main elements:   ", l_list)
     return l_list
 
 
-def getUniqueElements(list):
-    checkSet = set()
-    resList = []
 
-    for i in range(len(list)):
-        for j in range(i+1, len(list)):
-            if list[i] == list[j]:
-                checkSet.add(list[i])
-                break
-    print()
 
-    for i in list:
-        ch = True
-        for j in checkSet:
-            if i == j:
-                ch = False
-        if ch:
-            resList.append(i)
+def getUniqueElements(p_list):
+
+    resList = list(filter(lambda i: p_list.count(i) == 1, p_list))
 
     return resList
 

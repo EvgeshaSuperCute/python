@@ -8,13 +8,6 @@ def set_data(n):
     return data
 
 
-def checkWord(word, p_str):
-    if word.find(p_str) != -1:
-        return True
-    else:
-        return False
-
-
 def findWords(data):
     f_str = input("|Enter text to find: \033[0m")
     i = 0
@@ -22,13 +15,15 @@ def findWords(data):
 
     size = count["Start"] = len(tmp)
 
+
     while i != size:
-        if checkWord(tmp[i], f_str):
+        if tmp[i].find(f_str) != -1:
             tmp.pop(i)
             size -= 1
             i -= 1
 
         i += 1
+
     count["End"] = size
     return tmp
 

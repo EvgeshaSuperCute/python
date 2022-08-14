@@ -26,7 +26,6 @@ def accuracy() -> int:
     l_acr = checkInputValue()
     step = 1
     while (step * l_acr) % 1 != 0:
-        print(l_acr)
         step *= 10
         j += 1
     return j

@@ -2,35 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8da60e35-ea5b-425d-bb5f-2c5a32dddb6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../task-1/.idea/task-1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../task-1/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../task-1/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../task-2/.idea/task-2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../task-2/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../task-3/.idea/task-3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../task-3/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../task-4/.idea/task-4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../task-4/degree_indexes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../task-4/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../task-4/polynomial.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/task-5.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/degree_indexes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/polynomialSumm.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/polynomial_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/polynomial_2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Account_Book/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Account_Book/_mainForm/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Account_Book/_mainForm/_mainForm.pyproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Account_Book/_mainForm/mainwindow.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hm_3/task-1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hm_3/task-1/.idea/task-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../hm_3/task-1/.idea/task-1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../hm_3/task-1/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../hm_3/task-1/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hm_3/task-3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../hm_3/task-3/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../hm_3/task-3/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../hm_3/task-3/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../hm_3/task-4/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../hm_3/task-4/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../hm_3/task-5/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../hm_3/task-5/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../hm_3/task-5/.idea/task-5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../hm_3/task-5/.idea/task-5.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hm_3/task-4/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../hm_3/task-4/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../hm_3/task-4/.idea/task-4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../hm_3/task-4/.idea/task-4.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../hm_3/task-5/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../hm_3/task-5/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task-1/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../task-1/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task-3/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../task-3/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1659910076883</updated>
       <workItem from="1659910099397" duration="2861000" />
+      <workItem from="1660506069927" duration="3871000" />
     </task>
     <servers />
   </component>
@@ -101,8 +90,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/task_5$main.coverage" NAME="main Coverage Results" MODIFIED="1659912934710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/main_py$main.coverage" NAME="main Coverage Results" MODIFIED="1660514669909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

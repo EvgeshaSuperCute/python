@@ -18,11 +18,10 @@ def checkInputValue():
 def listFill():
     print("list size:", end="")
     n = checkInputValue()
-    list = []
-    for i in range(n):
-        list.append(rnd(-99,99))
-    print(list)
-    return list
+    l_list = [rnd(-99, 99) for i in range(n)]
+
+    print(l_list)
+    return l_list
 
 def summ(list):
     res = 0
