@@ -1,76 +1,54 @@
-from PyQt5 import QtWidgets as qw
-from PyQt5.QtWidgets import QApplication as qApp, QMainWindow as qmWin
-import sys
-import psycopg2
-from psycopg2 import Error
+from UI import App
+from db_connect import db_connect, close_connection
+
+import json
 
 
-def App():
-    app = qApp(sys.argv)
-    win = qmWin()
-
-    win.setWindowTitle("Test")
-    win.setGeometry(500, 300, 500, 500)
-
-    win.show()
-
-    sys.exit(app.exec_())
-
-
-def db_connect():
-    try:
-        # Подключение к существующей базе данных
-        con = psycopg2.connect(user="postgres",
-                                      # пароль, который указали при установке PostgreSQL
-                                      password="2825",
-                                      host="127.0.0.1",
-                                      port="5432",
-                                      database="AccountBook")
-
-        # Курсор для выполнения операций с базой данных
-        cursor = con.cursor()
-        # Распечатать сведения о PostgreSQL
-        print("Информация о сервере PostgreSQL")
-        print(con.get_dsn_parameters(), "\n")
-        # Выполнение SQL-запроса
-        cursor.execute("SELECT version();")
-        # Получить результат
-        record = cursor.fetchone()
-        print("Вы подключены к - ", record, "\n")
-
-        return con
-
-    except (Exception, Error) as error:
-        print("Ошибка при работе с PostgreSQL", error)
-    finally:
-        if cursor:
-            cursor.close()
-
-
-def close_connection(con):
-    if con:
-        con.close()
-        print("Соединение с PostgreSQL закрыто")
 
 def get_data(con):
     cur = con.cursor()
     cur.execute('SELECT id, name, second_name, phone_number from "Person"')
-
     rows = cur.fetchall()
+
+    request_result = {"RECORDS":[]}
+
     for row in rows:
-        print("id =", row[0])
-        print("name =", row[1])
-        print("second_name =", row[2])
-        print("phone_namber =", row[3], "\n")
+        request_result["RECORDS"].append({"id": row[0], "name": row[1], "second_name": row[2], "phone_number": row[3]})
 
     cur.close()
     print("Operation done successfully")
+    return request_result
+
+
+def set_data(con):
+    cur = con.cursor()
+    rows = []
+    with open ("ExportJson.json", "r") as f:
+        rows = json.load(f)
+    print(json.dumps(rows, indent= 2))
+
+    i = 10
+    for row in rows["RECORDS"]:
+        print(row)
+        i +=1
+        request = """INSERT INTO "Person" VALUES(%s, %s, %s, %s)"""
+        request_data = (row["id"]+str(i), row["name"], row["last_name"], row["phone_number"])
+        cur.execute(request, request_data)
+
+    con.commit()
+    cur.close()
+    print("Operation done successfully")
+    return 0
 
 
 def main():
     connect = db_connect()
-    get_data(connect)
+    # export = get_data(connect)
+    set_data(connect)
 
+    # with open ("request_result.json", "w") as f:
+    #     json.dump(export, f, indent=2)
+    # print(json.dumps(export, indent=2))
     close_connection(connect)
 
     # App()
