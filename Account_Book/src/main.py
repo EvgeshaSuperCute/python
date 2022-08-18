@@ -1,5 +1,5 @@
-from UI import App
-from db_connect import db_connect, close_connection
+from UI.UI import App
+from database.db_connect import db_connect, close_connection
 
 import json
 
@@ -23,7 +23,7 @@ def get_data(con):
 def set_data(con):
     cur = con.cursor()
     rows = []
-    with open ("ExportJson.json", "r") as f:
+    with open ("../src/f_data/ExportJson.json", "r") as f:
         rows = json.load(f)
     print(json.dumps(rows, indent= 2))
 
@@ -46,7 +46,7 @@ def main():
     # export = get_data(connect)
     set_data(connect)
 
-    # with open ("request_result.json", "w") as f:
+    # with open ("../src/f_data/request_result.json", "w") as f:
     #     json.dump(export, f, indent=2)
     # print(json.dumps(export, indent=2))
     close_connection(connect)
